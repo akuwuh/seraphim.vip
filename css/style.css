@@ -1,0 +1,153 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url("/seraphim.vip/images/background.gif") no-repeat center center fixed;
+    font-family: 'Yomogi', cursive;
+    background-color: black;
+    cursor: url(images/favicon.html), auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    min-height: 100%;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 255);
+}
+
+
+/*-------------------------------------------
+    $ Loader
+-------------------------------------------*/
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 228, 228);
+    z-index: 2;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 3em;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    animation: 1s infinite ease-in-out;
+}
+
+.loader:before,
+.loader:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Loader 8 */
+
+.loader-8:before,
+.loader-8:after {
+    content: '';
+    background-color: #333;
+    transform: scale(0);
+    animation: loader8 1.5s infinite ease-in-out;
+}
+
+.loader-8:after {
+    animation-delay: 0.75s;
+}
+
+@keyframes loader8 {
+    0% {
+        transform: translateX(-100%) scale(0);
+    }
+    50% {
+        transform: translateX(0%) scale(1);
+    }
+    100% {
+        transform: translateX(100%) scale(0);
+    }
+}
+
+.button-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.button {
+    height: 120px;
+    width: 120px;
+    border-radius: 65px;
+}
+
+h1 {
+    font-family: 'Yomogi', cursive;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    min-height: 100%;
+    position: absolute;
+    top: 70px;
+    left: 140px;
+    color: #393939;
+    font-size: 5rem;
+}
+
+.typing-text::after {
+    content: "|";
+    animation: blink ease 1s infinite;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

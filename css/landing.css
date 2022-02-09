@@ -1,0 +1,86 @@
+        body {
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        li {
+            display: inline;
+        }
+        
+        .content {
+            position: absolute;
+            z-index: 100;
+        }
+        
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            transform: trasnlateY(-50%);
+        }
+        
+        .bg-wrapper {
+            background-image: url(/seraphim.vip/images/main.jpg);
+            background-size: cover;
+            animation: icc 30s infinite;
+            animation: blur 4s infinite;
+            /*animation: bob 4s infinite; */
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        
+        @keyframes icc {
+            0% {
+                filter: hue-rotate(1deg);
+            }
+            50% {
+                filter: hue-rotate(360deg);
+            }
+            100% {
+                filter: hue-rotate(1deg);
+            }
+        }
+        
+        @keyframes blur {
+            0% {
+                filter: blur(0.5px);
+            }
+            50% {
+                filter: blur(3px);
+            }
+            100% {
+                filter: blur(0.5px);
+            }
+        }
+        
+        @keyframes bob {
+            0% {
+                transform: translateY(0%);
+            }
+            50% {
+                transform: translateY(5%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
